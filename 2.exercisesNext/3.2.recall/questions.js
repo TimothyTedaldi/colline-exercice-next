@@ -1,65 +1,79 @@
-let selectElementsStartingWithA = (array) => {
-    return 'Write your method here';
-}
+let selectElementsStartingWithA = (array) => array.filter(word => word[0] == 'a');
 
-let selectElementsStartingWithVowel = (array) => {
-    return 'Write your method here';
-}
+let selectElementsStartingWithVowel = (array) => array.filter(word=>word[0] == 'a' || word[0] == 'o' || word[0] == 'e' || word[0] == 'i' || word[0] == 'u' || word[0] == 'y')    
 
-let removeNullElements = (array) => {
-    return 'Write your method here';
-}
+let removeNullElements = (array) => array.filter(word => word != null);
 
-let removeNullAndFalseElements = (array) => {
-    return 'Write your method here';
-}
+let removeNullAndFalseElements = (array) => array.filter(word => word != null).filter(word => word !== false);
 
 let reverseWordsInArray = (array) => {
-    return 'Write your method here';
+    for(i=0; i<array.length;i++){
+        array[i]=array[i].split('').reverse().join('')
+    }
+    return array
 }
 
 let everyPossiblePair = (array) => {
-    return 'Write your method here';
+    let tempArr = []
+    tempArr.push([array[2], array[0]]);
+    tempArr.push([array[2], array[1]]);
+    tempArr.push([array[0], array[1]]);
+    return tempArr;
+    
 }
 
-let allElementsExceptFirstThree = (array) => {
-    return 'Write your method here';
-}
+let allElementsExceptFirstThree = (array) => array=array.splice(3, array.length-3);
 
 let addElementToBeginning = (array, element) => {
-    return 'Write your method here';
+    array.unshift(element)
+    return array;
 }
-
 let sortByLastLetter = (array) => {
-    return 'Write your method here';
+    array.sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
+    return array;
 }
 
 let getFirstHalf = (string) => {
-    return 'Write your method here';
-}
+    return string.split('').splice(0, Math.ceil(string.length / 2)).join('');}
 
 let makeNegative = (number) => {
-    return 'Write your method here';
+    return -Math.abs(number);
 }
 
 let numberOfPalindromes = (array) => {
-    return 'Write your method here';
+    return array.filter(word => word == word.split('').reverse().join('')).length;
 }
 
 let shortestWord = (array) => {
-    return 'Write your method here';
+    return array.sort((a, b) => {
+        if (a.length > b.length) {
+            return 1;
+        } else if (a.length < b.length) {
+            return -1;
+        }
+    })[0];
 }
 
 let longestWord = (array) => {
-    return 'Write your method here';
+    return array.sort((a, b) => {
+        if (a.length < b.length) {
+            return 1;
+        } else if (a.length > b.length) {
+            return -1;
+        }
+    })[0];
 }
 
+
 let sumNumbers = (array) => {
-    return 'Write your method here';
+    sum=0;
+    for(i=0; i<array.length; i++){
+        sum+=array[i];
+    }
+    return sum;
 }
 
 let repeatElements = (array) => {
-    return 'Write your method here';
 }
 
 let stringToNumber = (string) => {
