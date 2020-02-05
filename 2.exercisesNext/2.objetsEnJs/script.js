@@ -107,6 +107,3 @@ Wistache.weapon=hexalibur;
 
 console.log(hexalibur)
 Wistache.attack();
-
-
-// Exo Bonus
